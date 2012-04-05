@@ -1,9 +1,12 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Looper.h"
 
 #define WIDTH 1024
 #define HEIGHT 768
+#define HALF_WIDTH 512
+#define HALF_HEIGHT 384
 
 #define PINK 196, 0, 118
 #define PURPLE 76, 0, 183
@@ -40,6 +43,7 @@ class testApp : public ofBaseApp{
     
         // Drawing
         ofFbo bgFbo, scene, final;
+        ofImage texture, noise;
         ofShader shader, texturizer, blur;
         float blurScale;
     
@@ -48,18 +52,18 @@ class testApp : public ofBaseApp{
         vector<ofPoint>stars;
         ofVbo starVbo;
         ofFbo starFbo;
+        vector<Looper> loopers;
     
         // Interpolated values
         float count;
         float roll;
         ofColor background;
-        ofColor rainbow;
-    
+        ofColor rainbow;    
         float hue;
         ofColor interp;
         float interpAmt;
     
-        ofImage texture, noise;
+        // Camera
         ofEasyCam cam;
 };
 
