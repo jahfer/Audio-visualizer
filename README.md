@@ -1,0 +1,1 @@
+A very simple audio visualizer using openFrameworks for VBOs and FBOs, plus a couple of shaders and an FFT graph to calculate the beat frequencies.
